@@ -6,10 +6,6 @@ variable "flavor" {
   default = "icb_base"
 }
 
-variable "ssh_user_name" {
-  default = "centos"
-}
-
 variable "external_gateway" {
   default = "Note! Network ID from gateway"
 }
