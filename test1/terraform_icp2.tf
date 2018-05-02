@@ -102,6 +102,7 @@ resource "openstack_compute_floatingip_associate_v2" "terraform" {
       "echo '${openstack_compute_instance_v2.terraform.name}' >> /etc/hosts",
 
       "sudo sysctl -w vm.max_map_count=262144",
+      "sudo yum install -y wget",
       "wget https://download.docker.com/linux/centos/7/x86_64/stable/Packages/docker-ce-17.09.1.ce-1.el7.centos.x86_64.rpm",
       "sudo yum install -y docker-ce-17.09.1.ce-1.el7.centos.x86_64.rpm",
       "sudo systemctl start docker",
